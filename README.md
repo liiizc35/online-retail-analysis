@@ -53,15 +53,15 @@
 
 | 月度销售趋势 | TOP10 畅销商品 |
 | --- | --- |
-| ![月度趋势](output/01_daily_trend.png) | ![TOP10](output/02_top10_products.png) |
+| ![月度趋势](output/charts/01_daily_trend.png) | ![TOP10](output/charts/02_top10_products.png) |
 
 | 各国家销售额 | 客单价分布 |
 | --- | --- |
-| ![国家](output/03_countries.png) | ![客单价](output/04_price_dist.png) |
+| ![国家](output/charts/03_countries.png) | ![客单价](output/charts/04_price_dist.png) |
 
 | RFM 分层占比 | RFM 三维分布 |
 | --- | --- |
-| ![RFM 分层](output/05_rfm_segments.png) | ![RFM 散点](output/06_rfm_scatter.png) |
+| ![RFM 分层](output/charts/05_rfm_segments.png) | ![RFM 散点](output/charts/06_rfm_scatter.png) |
 
 ## 数据处理说明
 
