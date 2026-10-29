@@ -69,6 +69,7 @@
 - **取消订单为什么单独处理**：取消订单的 `Quantity` 为负，已在「无效订单」一步被 `Quantity > 0` 过滤，单独一步为防御性写法。
 - **索引验证**：`EXPLAIN QUERY PLAN` 输出 `SEARCH orders USING COVERING INDEX idx_orders_customer (CustomerID=?)`，确认查询命中覆盖索引。
 - **RFM 打分**：用 `pd.qcut(rank(method="first"), 5)` 做等频分箱，避免等距分箱在长尾消费分布下严重倾斜。
+- **TOP10 商品口径**：剔除 `POST`（邮费）、`M`（手工录入）、`D`（折扣）等非商品 StockCode。`PAPER CRAFT, LITTLE BIRDIE` 的 £168,469 销售额来自单笔 8 万件的批发订单，不代表常规零售趋势，分析结论时应单独看待。
 
 ## 目录结构
 

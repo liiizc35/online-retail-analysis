@@ -54,6 +54,7 @@ SELECT StockCode, Description,
   SUM(Quantity) AS 销售数量,
   ROUND(SUM(TotalAmount), 2) AS 销售额
 FROM orders
+WHERE StockCode NOT IN ('POST','D','M','DOT','C2','BANK CHARGES','AMAZONFEE','S','PAD','SP1002')
 GROUP BY StockCode
 ORDER BY 销售额 DESC
 LIMIT 10

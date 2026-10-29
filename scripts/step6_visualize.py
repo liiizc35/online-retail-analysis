@@ -65,7 +65,9 @@ print("    ✓ 01_daily_trend.png")
 print("\n  [2/6] TOP10 畅销商品...")
 df = pd.read_sql("""
     SELECT Description, ROUND(SUM(TotalAmount), 2) AS sales
-    FROM orders GROUP BY Description
+    FROM orders
+    WHERE StockCode NOT IN ('POST','D','M','DOT','C2','BANK CHARGES','AMAZONFEE','S','PAD','SP1002')
+    GROUP BY Description
     ORDER BY sales DESC LIMIT 10
 """, conn)
 df["Description"] = df.Description.str[:40]
