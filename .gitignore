@@ -1,0 +1,7 @@
+# 数据文件不入库：体积大（CSV 46MB / DB 78MB），可从 UCI 原始链接重新下载
+data/
+
+# Python 缓存
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
